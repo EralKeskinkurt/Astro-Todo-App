@@ -1,0 +1,87 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro"
+import CreateForm from "../components/CreateForm.jsx";
+const cookie = Astro?.cookies.get('todos')?.value ? Astro.cookies.get('todos')?.value : []
+---
+
+<DefaultLayout>
+    <main class="todo-container">
+        <CreateForm todos={cookie} client:load/>
+    </main>
+</DefaultLayout>
+
+<style lang="scss" is:global>
+    @import "../styles/global";
+
+    .todo-container{
+      background: $color-one;
+      width: 500px;
+      height: auto;
+      display: block;
+      padding: 40px 0;
+      border-top: 4px solid rgba(255, 255, 255, 0.27);
+      .input-group{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+        button{
+          background: $color-green !important;
+          border: none;
+          width: 400px;
+          height: 40px;
+          cursor: pointer;
+          transition: 0.3s ease;
+          border-radius: 2px;
+
+          &:hover{
+            background: rgba(45, 203, 124, 0.85) !important;
+          }
+          a{
+            justify-content: center;
+            display: inline-flex;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            width: 100%;
+            height: 100%;
+            color: white;
+            text-decoration: none;
+          }
+        }
+        .input-item{
+          outline: none;
+          border: none;
+          width: 400px;
+          height: 40px;
+          font-size: 1rem;
+          background: linear-gradient(300deg ,$color-two, $color-three);
+          border-radius: 2px;
+          font-weight: 800;
+          padding: 0 0 0 10px;
+          color: white;
+          &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: rgba(255, 255, 255, 0.72);
+          }
+        }
+        .textarea-item{
+          outline: none;
+          border: none;
+          width: 400px;
+          height: 200px;
+          resize: none;
+          font-size: 1.2rem;
+          font-weight: 600;
+          background: linear-gradient(300deg ,$color-two, $color-three);
+          border-radius: 2px;
+          padding: 10px 10px;
+          color: white;
+          &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: rgba(255, 255, 255, 0.72);
+          }
+        }
+      }
+    }
+</style>
