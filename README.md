@@ -1,47 +1,48 @@
-# Astro Starter Kit: Minimal
+# Astro Framework Todo App
 
-```
-npm create astro@latest -- --template minimal
-```
+This project is a Todo application built with Astro Framework. This application allows users to create, edit, and delete their todo list items. The design is created using SASS CSS preprocessor.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Create Todo List: Users can add a new todo item to their list.
+- Edit Todos: Users can edit existing todo items and save the changes.
+- Delete Todos: Users can delete todo items from the list.
+- Save Todos: User's changes are saved in browser cookies, allowing them to see their todos on subsequent visits.
 
-## 🚀 Project Structure
+## Installation
 
-Inside of your Astro project, you'll see the following folders and files:
+1. Clone or download this project.
+   ```bash
+      git clone https://github.com/TamperMonkeyUpp/Astro-Todo-App.git
+   ```
+3. Navigate to the project folder and open a terminal.
+  ```bash
+    cd Astro-Todo-App
+  ``` 
+4. Run the following command to install the necessary dependencies:
+   ```bash
+      npm install
+   ```
+5. Run the following command to start the application:
+   ```bash
+      npm run dev
+   ```
+   5. Open your browser and go to `http://localhost:4321/` to start using the Todo app.
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Technologies Used
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- Astro Framework: A framework for building static sites.
+- SASS: A CSS preprocessor that allows writing CSS in a more organized and modular way.
+- JavaScript: The programming language used to provide functionality to the application.
+- React : A framework for building components
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Contributing
 
-Any static assets, like images, can be placed in the `public/` directory.
+If you find any issues or would like to add new features to the application, please open an issue or submit a pull request. We welcome all contributions!
 
-## 🧞 Commands
+## License
 
-All commands are run from the root of the project, from a terminal:
+###### This project is licensed under the MIT License. For more information, please see the `LICENSE` file.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
