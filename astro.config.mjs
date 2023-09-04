@@ -5,10 +5,10 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://hxann.com",
+  site: "https://astro-todo-app.vercel.app/",
   integrations: [react()],
   output: 'server',
   adapter: node({
-    mode: "standalone"
-  })
+    mode: 'standalone',
+  }),
 });
