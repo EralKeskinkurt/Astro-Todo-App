@@ -43,5 +43,6 @@ If you find any issues or would like to add new features to the application, ple
 ## License
 
 This project is licensed under the MIT License. For more information, please see the `LICENSE` file.
+
 ---
 
