@@ -5,9 +5,8 @@ export default function CreateForm(props) {
     const [todoDesc, todoDescSet] = useState("")
     const todos = JSON.parse(props.todos)
     const filteredTodo = todos.find(todo => todo.todoId !== JSON.parse(props.selectedTodo))
-    console.log(filteredTodo)
     const createClick = async () => {
-        let storageData = filteredTodo.length === 0 ? [] : [filteredTodo]
+        let storageData = !filteredTodo ? [] : [filteredTodo]
         storageData.push(
             {
                 todoId: new Date().getMilliseconds() * 39595 * new Date().getTime(),
